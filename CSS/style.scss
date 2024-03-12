@@ -1,0 +1,262 @@
+//@media screen AND (min-width:550px)
+
+@import 'variable';
+
+
+body{
+    font-family: $textFont;
+    margin: 0;
+}
+
+a{
+    color: $altColor;
+}
+
+.Header{
+    display: flex;
+    flex-direction: column;
+    background: rgb(243, 237, 216);
+    background: linear-gradient(142deg, rgb(247, 242, 222) 0%, rgba(113, 198, 255, 0.829) 100%);
+    text-align: center;
+    &-social{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        order: -1;
+        background-color:$bgColor;
+        padding: 15px 0;
+        a{
+        text-decoration: none;
+        padding: 0 5px;
+        }
+        svg{
+            height: 18px;
+            width: auto;
+            color:$defonceColor;   
+            padding: 0;
+        }
+        &-navMenu{
+            display: flex;    
+        }
+        &-button{
+            background-color: $firstColor;
+            color: $defonceColor;
+            border: none;
+            border-radius: 10px;
+            padding: 7px 12px;
+        }
+    }
+    &-content{
+        &-figure{
+            display: flex;
+            flex-direction: column;
+            figcaption{
+                order: -1;
+                color: $secondColor;
+                align-self: center;
+                font-size: small;
+            }
+            img{
+                margin: 0 auto;
+                width: 75%;
+            }
+        }
+        &-text{
+            text-align: left;
+            font-family: $titleFont;
+            margin: 40px 0 25px 0;
+            padding-left: 1em;
+            h1{
+                color: $firstColor;
+                font-size:3.5em;
+                margin: 0; 
+            }
+            h2{
+                font-size: 2em;
+                margin: 0;
+            }
+        }
+    }
+    &-navMenu{
+        background-color: $bgColor;
+        &-link{
+            display: block;
+            text-align: center;
+            color: $defonceColor;
+            text-decoration: none;
+            padding: 10px 0;
+        }
+        :nth-child(3){
+            background-color: $textColor;
+        }
+    }
+}
+
+
+
+.MainContent{
+    &-services-block:nth-child(2){
+        background-color: $bgColorUltraLight;
+        h2{
+            text-align: right;
+            padding-top: 30px;
+            margin: 0;
+        }
+    } 
+    &-cta{
+        background-image: linear-gradient(142deg, rgba(62, 198, 252, 0.356) 0%, rgba(75, 178, 247, 0.336) 100%), url(../img/computer-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 6em 1em 4em 1em;
+        font-family: $titleFont;
+        text-align: center;
+        color: white;
+        text-shadow: 4px 4px 6px #666;
+        &-titles{
+            h2{
+                font-size: 2em;
+            }
+        }
+        &-button{
+            background-color: $altColor;
+            color: $defonceColor;
+            border: none;
+            border-radius: 10px;
+            padding: 7px 12px;
+        }
+    }
+}
+
+.ServiceBlock{
+    padding: 0 1em;
+    &-title{
+        font-family: $titleFont;
+        color: $firstColor;
+        font-size: 2em;
+    }
+    &-content{
+        img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.Footer{
+    background-color: $bgColor;
+    color: $defonceColor;
+    &-block{
+        padding: 1em;
+        &-title{
+            text-align: center;
+            font-family: $titleFont;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+        &-content{
+            font-size: 0.9em;
+        }
+    }
+}
+
+
+@media screen AND (min-width:550px){
+    body{
+        margin: 0 4em;
+        background-color: $bgColorUltraLight;
+    }
+    .Header{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-content{
+            margin-right: auto;
+            &-figure{
+                display: flex;
+                flex-direction: column;
+                margin: 1em 0 0 2em;
+                figcaption{
+                    order: 1; 
+                    align-self: flex-start;  
+                    padding: 0 0 0 1.7em;
+                } 
+                img{
+                margin: 0;
+                width: 35%;
+                }
+            }         
+        }
+        &-social{
+            order: 1;
+            align-self: flex-start;
+            margin-left: auto;
+            padding: 25px 1em 0 0;
+            background-color:$transparentColor;
+            svg{
+                color:$bgColor;   
+                }
+             &-navMenu{
+                 flex-direction: column;  
+             }
+        }
+        &-navMenu{
+            order: 2;
+            align-self: flex-end;
+            width: 100%;
+            padding:  1em;
+            text-align: right;
+            &-link{
+                display: inline;
+                padding:  1em;
+            }
+        }
+    }
+
+    .MainContent{
+        background-color:$defonceColor;
+        &-services-block:nth-child(2){
+            h2{
+                text-align: center;
+            }
+        } 
+        &-services{
+            padding: 2em;
+            // margin-top: 1em;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2em;
+            &-block{
+                background-color: $bgColorUltraLight;
+            }
+        }
+        &-cta{
+            padding: 10em 1em;
+
+        }
+    }
+
+    .ServiceBlock{
+        &-title{
+            font-size: 1.6em;
+            text-align: center;
+        }
+    }
+
+    .Footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+} 
+
